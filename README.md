@@ -24,6 +24,7 @@ Prefacing the icon code with `fa` or `zmdi` is unnecessary; you can drop it off 
 
 ```
 label.text = "address-book".fa.icon
+label.text = "satellite".zmdi.icon
 ```
 
 ** Credit to [thii](https://github.com/thii/FontAwesome.swift) for the FontLoader and Image code. **
