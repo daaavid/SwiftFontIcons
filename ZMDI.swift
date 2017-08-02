@@ -18,7 +18,7 @@ public class ZMDI: IconProtocol {
   }
   
   init(_ code: String) {
-    self.code = code
+    self.code = code.replacingOccurrences(of: "zmdi-", with: "")
   }
   
   fileprivate static let icons: [String: String] = [
