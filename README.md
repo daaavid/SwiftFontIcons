@@ -1,10 +1,11 @@
 # SwiftyFontIcons
-zmdi and fontawesome icons for use in ios
+ZMDI and FontAwesome icons for use in ios.
 
 ## Installation
 Drag the source files into your project.
 
 ## Usage
+Use is easy as pie; type the icon code you want to use followed by `.zmdi` or `.fa` and then `.icon` or `.image`. If you're using `.icon`, remember to set the font for the label / button / whatever beforehand.
 
 ```
 label.font = .zmdi(size: 20)
