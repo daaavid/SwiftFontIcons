@@ -18,3 +18,5 @@ label.text = "fa-user".fa.icon
 imageView.image = "remote-control".zmdi.image(color: .white, size: imageView.frame.size)
 imageView.image = "fa-user".fa.image(color: .white, size: imageView.frame.size)
 ```
+
+** Credit to [thii](https://github.com/thii/FontAwesome.swift) for the FontLoader and Image code. **
