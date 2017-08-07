@@ -29,6 +29,8 @@ label.text = "address-book".fa.icon
 label.text = "satellite".zmdi.icon
 ```
 
+Check out this [Example Code](https://github.com/daaavid/SwiftFontIcons/blob/master/Example/SwiftFontIcons/ViewController.swift) for more usage examples.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
