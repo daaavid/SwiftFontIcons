@@ -16,6 +16,10 @@ public extension UIFont {
   public static func fa(size: CGFloat) -> UIFont {
     return FontAwesome.font(size: size)
   }
+  
+  public var attribute: [String: Any] {
+    return [NSFontAttributeName: self]
+  }
 }
 
 public extension String {
@@ -29,7 +33,6 @@ public protocol IconProtocol {
   var icon: String? { get }
   
   static func font(size: CGFloat) -> UIFont
-  static func fontAttribute(size: CGFloat) -> [String: Any]
   
   func image(color: UIColor, size: CGFloat, backgroundColor: UIColor) -> UIImage?
   func image(color: UIColor, size: CGSize, backgroundColor: UIColor) -> UIImage?
@@ -37,10 +40,6 @@ public protocol IconProtocol {
 
 extension IconProtocol {
   public static var `extension`: String { return "ttf" }
-  
-  public static func fontAttribute(size: CGFloat) -> [String: Any] {
-    return [NSFontAttributeName: Self.font(size: size)]
-  }
   
   public static func font(size: CGFloat) -> UIFont {
     if UIFont.fontNames(forFamilyName: name).count == 0 {

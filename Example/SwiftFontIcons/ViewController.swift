@@ -13,6 +13,25 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    view.backgroundColor = .white
+    
+    let button = UIBarButtonItem(title: "arrow-left".fa.icon!, style: .plain, target: nil, action: nil)
+    var attributes = UIFont.fa(size: 18).attribute
+    attributes[NSForegroundColorAttributeName] = UIColor.red
+    button.setTitleTextAttributes(attributes, for: .normal)
+    navigationItem.leftBarButtonItem = button
+    
+    
+    
+    let imageView = UIImageView()
+    view.addSubview(imageView)
+    
+    imageView.image = "archive".zmdi.image(color: .gray, size: 100)
+    imageView.frame.size = imageView.image!.size
+    imageView.center = view.center.offsetBy(y: -imageView.image!.size.height)
+    
+    
+    
     let zmdiIconCodes = ["account", "money-box", "twitter"]
     let colors: [UIColor] = [.black, .green, .cyan]
     
@@ -21,7 +40,7 @@ class ViewController: UIViewController {
       view.addSubview(label)
       
       label.textAlignment = .center
-      label.font = .zmdi(size: 60)
+      label.font = .zmdi(size: 40)
       
       let (code, color) = codeAndColor
       label.text = code.zmdi.icon
