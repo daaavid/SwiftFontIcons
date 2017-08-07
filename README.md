@@ -1,4 +1,4 @@
-# SwiftyFontIcons
+# SwiftFontIcons
 ZMDI and FontAwesome icons for use in ios.
 
 ## Installation
