@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/daaavid/SwiftFontIcons'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'daaavid' => 'david@bronze5.net' }
+  s.author           = { 'David Johnson' => 'david@bronze5.net' }
   s.source           = { :git => 'https://github.com/daaavid/SwiftFontIcons.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
