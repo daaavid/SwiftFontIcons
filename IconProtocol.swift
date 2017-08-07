@@ -29,10 +29,16 @@ protocol IconProtocol {
   var icon: String? { get }
   
   static func font(size: CGFloat) -> UIFont
+  func image(color: UIColor, size: CGFloat, backgroundColor: UIColor) -> UIImage?
   func image(color: UIColor, size: CGSize, backgroundColor: UIColor) -> UIImage?
 }
 
 extension IconProtocol {
+  public func image(color: UIColor, size: CGFloat, backgroundColor: UIColor = UIColor.clear) -> UIImage? {
+    let size = CGSize(width: size, height: size)
+    return image(color: color, size: size, backgroundColor: backgroundColor)
+  }
+  
   public func image(color: UIColor, size: CGSize, backgroundColor: UIColor = UIColor.clear) -> UIImage? {
     guard let icon = icon else { return nil }
     

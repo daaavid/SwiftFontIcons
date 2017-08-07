@@ -9,17 +9,14 @@
 import UIKit
 
 public class FontAwesome: IconProtocol {
-  static let name = "FontAwesome"
-  static let `extension` = "otf"
+  public static let name = "FontAwesome"
+  public static let `extension` = "otf"
   
-  fileprivate var code: String
   var icon: String? {
     return FontAwesome.icons[code]
   }
   
-  init(_ code: String) {
-    self.code = code.replacingOccurrences(of: "fa-", with: "")
-  }
+  fileprivate var code: String
   
   fileprivate static let icons: [String: String] = [
     "500px": "\u{f26e}",
@@ -794,4 +791,8 @@ public class FontAwesome: IconProtocol {
     "youtube-play": "\u{f16a}",
     "youtube-square": "\u{f166}"
   ]
+  
+  public init(_ code: String) {
+    self.code = code.replacingOccurrences(of: "fa-", with: "")
+  }
 }

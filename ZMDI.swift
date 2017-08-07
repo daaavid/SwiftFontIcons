@@ -9,17 +9,14 @@
 import UIKit
 
 public class ZMDI: IconProtocol {
-  static let name = "Material-Design-Iconic-Font"
-  static let `extension` = "ttf"
-  fileprivate var code: String
-  
+  public static let name = "Material-Design-Iconic-Font"
+  public static let `extension` = "ttf"
+
   public var icon: String? { 
     return ZMDI.icons[code] 
   }
   
-  init(_ code: String) {
-    self.code = code.replacingOccurrences(of: "zmdi-", with: "")
-  }
+  fileprivate var code: String
   
   fileprivate static let icons: [String: String] = [
     "3d-rotation" : "\u{f101}",
@@ -767,4 +764,8 @@ public class ZMDI: IconProtocol {
     "vibration" : "\u{f3e7}",
     "voicemail" : "\u{f3e8}",
     ]
+  
+  public init(_ code: String) {
+    self.code = code.replacingOccurrences(of: "zmdi-", with: "")
+  }
 }
