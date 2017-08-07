@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftFontIcons'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'Elegantly use ZMDI (Material Design Iconic Font) and FontAwesome icons in Swift for iOS.'
 
   s.homepage         = 'https://github.com/daaavid/SwiftFontIcons'
