@@ -10,7 +10,6 @@ import UIKit
 
 public class FontAwesome: IconProtocol {
   public static let name = "FontAwesome"
-  public static let `extension` = "otf"
   
   public var icon: String? {
     return FontAwesome.icons[code]

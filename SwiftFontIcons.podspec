@@ -30,8 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwiftFontIcons/Classes/**/*'
-  
+  s.source_files = 'SwiftFontIcons/Classes/**/*.{swift}'
+  s.resources = 'SwiftFontIcons/Fonts/**/*.{ttf}'
+
   # s.resource_bundles = {
   #   'SwiftFontIcons' => ['SwiftFontIcons/Assets/*.png']
   # }

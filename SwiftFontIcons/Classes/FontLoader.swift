@@ -12,9 +12,14 @@ import CoreText
 public class FontLoader {
   static func loadFont(_ name: String, withExtension ext: String) {
     let bundle = Bundle(for: FontLoader.self)
-    let url = bundle.url(forResource: name, withExtension: ext)!
+    let url: URL = bundle.paths(forResourcesOfType: ext, inDirectory: nil).flatMap { path -> URL? in
+      if let filename = NSURL(fileURLWithPath: path).lastPathComponent, filename.lowercased().contains(name.lowercased()) {
+        return NSURL(fileURLWithPath: path) as URL
+      }
+      return nil
+    }.first!
+
     let data = try! Data(contentsOf: url)
-    
     let provider = CGDataProvider(data: data as CFData)
     let font = CGFont(provider!)
     

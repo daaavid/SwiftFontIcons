@@ -10,7 +10,6 @@ import UIKit
 
 public class ZMDI: IconProtocol {
   public static let name = "Material-Design-Iconic-Font"
-  public static let `extension` = "ttf"
 
   public var icon: String? { 
     return ZMDI.icons[code] 

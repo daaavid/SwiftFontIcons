@@ -36,6 +36,8 @@ public protocol IconProtocol {
 }
 
 extension IconProtocol {
+  public static var `extension`: String { return "ttf" }
+  
   public static func fontAttribute(size: CGFloat) -> [String: Any] {
     return [NSFontAttributeName: Self.font(size: size)]
   }
