@@ -30,6 +30,7 @@ public extension String {
 public protocol IconProtocol {
   static var name: String { get }
   static var `extension`: String { get }
+  
   var icon: String? { get }
   
   static func font(size: CGFloat) -> UIFont
