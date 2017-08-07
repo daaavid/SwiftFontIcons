@@ -9,11 +9,11 @@
 import UIKit
 
 public extension UIFont {
-  static func zmdi(size: CGFloat) -> UIFont {
+  public static func zmdi(size: CGFloat) -> UIFont {
     return ZMDI.font(size: size)
   }
   
-  static func fa(size: CGFloat) -> UIFont {
+  public static func fa(size: CGFloat) -> UIFont {
     return FontAwesome.font(size: size)
   }
 }
@@ -23,17 +23,31 @@ public extension String {
   public var fa: FontAwesome { return FontAwesome(self) }
 }
 
-protocol IconProtocol {
-  static var name: String { get }
-  static var `extension`: String { get }
-  var icon: String? { get }
+public protocol IconProtocol {
+  public static var name: String { get }
+  public static var `extension`: String { get }
+  public var icon: String? { get }
   
   static func font(size: CGFloat) -> UIFont
+  static func fontAttribute(size: CGFloat) -> [String: Any]
+  
   func image(color: UIColor, size: CGFloat, backgroundColor: UIColor) -> UIImage?
   func image(color: UIColor, size: CGSize, backgroundColor: UIColor) -> UIImage?
 }
 
 extension IconProtocol {
+  static func fontAttribute(size: CGFloat) -> [String: Any] {
+    return [NSFontAttributeName: Self.font(size: size)]
+  }
+  
+  static func font(size: CGFloat) -> UIFont {
+    if UIFont.fontNames(forFamilyName: name).count == 0 {
+      FontLoader.loadFont(name, withExtension: `extension`)
+    }
+    
+    return UIFont(name: name, size: size)!
+  }
+  
   public func image(color: UIColor, size: CGFloat, backgroundColor: UIColor = UIColor.clear) -> UIImage? {
     let size = CGSize(width: size, height: size)
     return image(color: color, size: size, backgroundColor: backgroundColor)
@@ -62,13 +76,5 @@ extension IconProtocol {
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
     return image
-  }
-  
-  static func font(size: CGFloat) -> UIFont {
-    if UIFont.fontNames(forFamilyName: name).count == 0 {
-      FontLoader.loadFont(name, withExtension: `extension`)
-    }
-    
-    return UIFont(name: name, size: size)!
   }
 }

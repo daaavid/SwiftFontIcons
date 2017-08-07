@@ -1,0 +1,6 @@
+framework module SwiftFontIcons {
+  umbrella header "SwiftFontIcons-umbrella.h"
+
+  export *
+  module * { export * }
+}

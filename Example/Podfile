@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftFontIcons_Example' do
+  pod 'SwiftFontIcons', :path => '../'
+
+  target 'SwiftFontIcons_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

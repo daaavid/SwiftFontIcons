@@ -1,8 +1,10 @@
 # SwiftFontIcons
-ZMDI and FontAwesome icons for use in ios.
+ZMDI and FontAwesome icons for use in ios, with easy to use code.
 
-## Installation
-Drag the source files into your project.
+[![CI Status](http://img.shields.io/travis/daaavid/SwiftFontIcons.svg?style=flat)](https://travis-ci.org/daaavid/SwiftFontIcons)
+[![Version](https://img.shields.io/cocoapods/v/SwiftFontIcons.svg?style=flat)](http://cocoapods.org/pods/SwiftFontIcons)
+[![License](https://img.shields.io/cocoapods/l/SwiftFontIcons.svg?style=flat)](http://cocoapods.org/pods/SwiftFontIcons)
+[![Platform](https://img.shields.io/cocoapods/p/SwiftFontIcons.svg?style=flat)](http://cocoapods.org/pods/SwiftFontIcons)
 
 ## Usage
 Use is easy as pie; type the icon code you want to use followed by `.zmdi` or `.fa` and then `.icon` or `.image`. This will return an optional String and UIImage, respectively. If you're using `.icon`, remember to set the font for the label / button / whatever beforehand.
@@ -27,4 +29,23 @@ label.text = "address-book".fa.icon
 label.text = "satellite".zmdi.icon
 ```
 
-** Credit to [thii](https://github.com/thii/FontAwesome.swift) for the FontLoader and Image code. **
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Installation
+
+SwiftFontIcons is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "SwiftFontIcons"
+```
+
+## Author
+
+daaavid, david.j.c.johnson@gmail.com
+
+## License
+
+SwiftFontIcons is available under the MIT license. See the LICENSE file for more info.

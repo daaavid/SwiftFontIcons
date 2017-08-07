@@ -1,0 +1,16 @@
+PODS:
+  - SwiftFontIcons (0.1.0)
+
+DEPENDENCIES:
+  - SwiftFontIcons (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftFontIcons:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftFontIcons: c70af49e3caf0f52e3e384c7fce571fb2979b52c
+
+PODFILE CHECKSUM: f4f9c09c3194ffb1ff02b3c5dbac679465f57efb
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,22 @@
+{
+  "name": "SwiftFontIcons",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftFontIcons.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/daaavid/SwiftFontIcons",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "daaavid": "david.j.c.johnson@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/daaavid/SwiftFontIcons.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftFontIcons/Classes/**/*"
+}

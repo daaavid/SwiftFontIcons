@@ -1,0 +1,6 @@
+framework module Pods_SwiftFontIcons_Tests {
+  umbrella header "Pods-SwiftFontIcons_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
