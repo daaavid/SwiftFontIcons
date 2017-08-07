@@ -24,9 +24,9 @@ public extension String {
 }
 
 public protocol IconProtocol {
-  public static var name: String { get }
-  public static var `extension`: String { get }
-  public var icon: String? { get }
+  static var name: String { get }
+  static var `extension`: String { get }
+  var icon: String? { get }
   
   static func font(size: CGFloat) -> UIFont
   static func fontAttribute(size: CGFloat) -> [String: Any]
@@ -36,11 +36,11 @@ public protocol IconProtocol {
 }
 
 extension IconProtocol {
-  static func fontAttribute(size: CGFloat) -> [String: Any] {
+  public static func fontAttribute(size: CGFloat) -> [String: Any] {
     return [NSFontAttributeName: Self.font(size: size)]
   }
   
-  static func font(size: CGFloat) -> UIFont {
+  public static func font(size: CGFloat) -> UIFont {
     if UIFont.fontNames(forFamilyName: name).count == 0 {
       FontLoader.loadFont(name, withExtension: `extension`)
     }

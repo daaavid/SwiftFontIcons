@@ -12,7 +12,7 @@ public class FontAwesome: IconProtocol {
   public static let name = "FontAwesome"
   public static let `extension` = "otf"
   
-  var icon: String? {
+  public var icon: String? {
     return FontAwesome.icons[code]
   }
   
