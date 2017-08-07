@@ -1,5 +1,5 @@
 # SwiftFontIcons
-ZMDI and FontAwesome icons for use in ios, with easy to use code.
+Elegantly use ZMDI (Material Design Iconic Font) and FontAwesome icons in Swift for iOS.
 
 [![CI Status](http://img.shields.io/travis/daaavid/SwiftFontIcons.svg?style=flat)](https://travis-ci.org/daaavid/SwiftFontIcons)
 [![Version](https://img.shields.io/cocoapods/v/SwiftFontIcons.svg?style=flat)](http://cocoapods.org/pods/SwiftFontIcons)
