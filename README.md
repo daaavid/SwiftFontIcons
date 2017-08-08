@@ -41,7 +41,7 @@ SwiftFontIcons is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SwiftFontIcons"
+pod 'SwiftFontIcons', :git => 'https://github.com/daaavid/SwiftFontIcons.git', :branch => 'master'
 ```
 
 ## Author
