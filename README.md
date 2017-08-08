@@ -7,7 +7,7 @@ Elegantly use ZMDI (Material Design Iconic Font) and FontAwesome icons in Swift 
 [![Platform](https://img.shields.io/cocoapods/p/SwiftFontIcons.svg?style=flat)](http://cocoapods.org/pods/SwiftFontIcons)
 
 ## Usage
-Use is easy as pie; type the icon code you want to use followed by `.zmdi` or `.fa` and then `.icon` or `.image`. This will return an optional String and UIImage, respectively. If you're using `.icon`, remember to set the font for the label / button / whatever beforehand.
+Use is easy as 🍰; type the icon code you want to use followed by `.zmdi` or `.fa` and then `.icon` or `.image`. This will return an optional String and UIImage, respectively. If you're using `.icon`, remember to set the font for the label / button / whatever beforehand.
 
 ```
 label.font = .zmdi(size: 20)
