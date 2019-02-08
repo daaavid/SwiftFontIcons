@@ -18,7 +18,7 @@ public extension UIFont {
   }
   
   public var attribute: [String: Any] {
-    return [NSFontAttributeName: self]
+    return [convertFromNSAttributedStringKey(NSAttributedString.Key.font): self]
   }
 }
 
@@ -66,12 +66,12 @@ extension IconProtocol {
     
     let fontSize = min(size.width / fontAspectRatio, size.height)
     let attributedString = NSAttributedString(
-      string: icon, attributes: [
-        NSFontAttributeName: Self.font(size: fontSize),
-        NSForegroundColorAttributeName: color, 
-        NSBackgroundColorAttributeName: backgroundColor, 
-        NSParagraphStyleAttributeName: paragraph
-      ]
+      string: icon, attributes: convertToOptionalNSAttributedStringKeyDictionary([
+        convertFromNSAttributedStringKey(NSAttributedString.Key.font): Self.font(size: fontSize),
+        convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): color, 
+        convertFromNSAttributedStringKey(NSAttributedString.Key.backgroundColor): backgroundColor, 
+        convertFromNSAttributedStringKey(NSAttributedString.Key.paragraphStyle): paragraph
+      ])
     )
     UIGraphicsBeginImageContextWithOptions(size, false , 0.0)
     attributedString.draw(in: CGRect(x: 0, y: (size.height - fontSize) / 2, width: size.width, height: fontSize))
@@ -79,4 +79,15 @@ extension IconProtocol {
     UIGraphicsEndImageContext()
     return image
   }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

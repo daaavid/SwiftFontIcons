@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     
     let button = UIBarButtonItem(title: "arrow-left".fa.icon!, style: .plain, target: nil, action: nil)
     var attributes = UIFont.fa(size: 18).attribute
-    attributes[NSForegroundColorAttributeName] = UIColor.red
-    button.setTitleTextAttributes(attributes, for: .normal)
+    attributes[convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor)] = UIColor.red
+    button.setTitleTextAttributes(convertToOptionalNSAttributedStringKeyDictionary(attributes), for: .normal)
     navigationItem.leftBarButtonItem = button
     
     
@@ -58,3 +58,14 @@ extension CGPoint {
   }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
