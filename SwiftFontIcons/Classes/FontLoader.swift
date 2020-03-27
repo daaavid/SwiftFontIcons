@@ -3,7 +3,7 @@
 //  fattpay
 //
 //  Created by David Johnson on 8/2/17.
-//  Copyright © 2017 Fattmerchant. All rights reserved.
+//  Copyright © 2017 David Johnson. All rights reserved.
 //
 
 import UIKit
